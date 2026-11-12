@@ -1,0 +1,12 @@
+﻿services:
+  frontend:
+    build: .
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+      NEXT_PUBLIC_GOOGLE_CLIENT_ID: 57335626323-6lac5g6c3r0d029midppknls33lv0hmi.apps.googleusercontent.com
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
